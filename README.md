@@ -4,8 +4,8 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=2196F3&center=true&vCenter=true&width=435&lines=Web+Developer;Mobile+Developer;AI+Engineer" alt="Typing SVG" /></a>
 
-<!-- Custom generated walking pixel character -->
-<img src="walking-character.gif" width="150" alt="walking pixel character"/>
+<!-- Custom generated retro game scrolling banner -->
+<img src="banner-retro.gif" width="100%" alt="retro game walking banner"/>
 
 ---
 
