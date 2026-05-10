@@ -14,8 +14,8 @@
 ### 🔗 Connect with me
 
 <a href="https://www.linkedin.com/in/nanda-putra-hartono/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-<a href="https://instagram.com/nandaputrahartono"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
-<a href="mailto:your.email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+<a href="https://www.instagram.com/nanda_putra324?igsh=MWQ3NWNsazVnbjl6ZQ=="><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
+<a href="mailto:nandaputrah235@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 <a href="https://my-portofolio-next-js.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
 
 </div>
@@ -75,7 +75,7 @@ I am a passionate **Web Developer, Mobile Developer, and AI Engineer** from Indo
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nandaputrahartono-pc&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=nandaputrahartono-pc&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=nandaputrahartono-pc&theme=radical&hide_border=true&background=0D1117" alt="GitHub Streak" />
 </div>
@@ -100,10 +100,11 @@ I am a passionate **Web Developer, Mobile Developer, and AI Engineer** from Indo
 > **Note:** GitHub README does not support iframes directly for security reasons. Here is a clickable image that redirects to the song!
 
 <div align="center">
-  <a href="https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe?si=0df9f68894454790">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=spotify&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=false" alt="Spotify" width="400"/>
+  <a href="https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe">
+    <img src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024c10f924eae00b377b623516" alt="Bubble (Abuku) - Yorushika" width="200" style="border-radius:15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-bottom: 15px;" />
     <br/>
-    <b>Bubble (Abuku) - Yorushika</b>
+    <b>Bubble (Abuku) - Yorushika</b><br/>
+    <img src="https://img.shields.io/badge/Listen_on-Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" style="margin-top: 10px;"/>
   </a>
 </div>
 
