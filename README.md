@@ -75,7 +75,7 @@ I am a passionate **Web Developer, Mobile Developer, and AI Engineer** from Indo
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats-anuraghazra.vercel.app/api?username=nandaputrahartono-pc&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=nandaputrahartono-pc&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117" alt="GitHub Stats" />
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=nandaputrahartono-pc&theme=radical&hide_border=true&background=0D1117" alt="GitHub Streak" />
 </div>
