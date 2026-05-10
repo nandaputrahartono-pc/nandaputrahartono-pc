@@ -4,7 +4,7 @@ import random
 
 W, H = 256, 80
 scale = 3
-N = 128 # 128 frames for longer loop and more events
+N = 256 # 256 frames for very long loop to space out events
 
 # Colors
 SKY = (15, 15, 35, 255)
@@ -42,28 +42,28 @@ for fi in range(N):
     # Moon
     draw.ellipse([200, 10, 216, 26], fill=MOON)
     
-    # Mountain BG (Speed 0.5 -> Dist 64)
-    offset_bg = int(fi * 0.5) % 64
-    for i in range(-1, W//32 + 3):
+    # Mountain BG (Speed 0.5 -> Dist 128)
+    offset_bg = int(fi * 0.5) % 128
+    for i in range(-1, W//32 + 5):
         bx = i * 32 - offset_bg
         draw.polygon([(bx, 50), (bx+16, 25), (bx+32, 50)], fill=MTN_BG)
 
-    # Mountain FG (Speed 1 -> Dist 128)
-    offset_fg = (fi * 1) % 128
-    for i in range(-1, W//64 + 3):
+    # Mountain FG (Speed 1 -> Dist 256)
+    offset_fg = (fi * 1) % 256
+    for i in range(-1, W//64 + 5):
         bx = i * 64 - offset_fg
         draw.polygon([(bx, 55), (bx+32, 30), (bx+64, 55)], fill=MTN_FG)
         
     # Ground
     draw.rectangle([0, 50, W, H], fill=GROUND)
     
-    # Trees & Random Ground Objects (Speed 2 -> Dist 256)
-    offset_ground = (fi * 2) % 256
-    for i in range(-1, W//256 + 2):
-        bx = i * 256 - offset_ground
+    # Trees & Random Ground Objects (Speed 2 -> Dist 512)
+    offset_ground = (fi * 2) % 512
+    for i in range(-1, W//512 + 2):
+        bx = i * 512 - offset_ground
         
         # --- Trees ---
-        for t_off in [30, 150, 200]:
+        for t_off in [30, 150, 280, 400]:
             tx, ty = bx + t_off, 52
             draw.rectangle([tx-2, ty-5, tx+2, ty], fill=TREE_TRUNK)
             draw.polygon([(tx, ty-25), (tx-8, ty-10), (tx+8, ty-10)], fill=TREE_LEAVES)
@@ -80,7 +80,7 @@ for fi in range(N):
             draw.point([tx+15, ty+3], fill=(255, 200, 0, 255))
             
         # --- Broken Car (on the grass/shoulder) ---
-        cx = bx + 220
+        cx = bx + 250
         cy = 53
         draw.rectangle([cx, cy, cx+20, cy+6], fill=(50, 100, 200, 255)) # body
         draw.rectangle([cx+4, cy-4, cx+16, cy], fill=(50, 100, 200, 255)) # top
@@ -88,16 +88,27 @@ for fi in range(N):
         draw.rectangle([cx+11, cy-3, cx+15, cy], fill=(150, 200, 255, 255))
         draw.rectangle([cx+3, cy+5, cx+6, cy+8], fill=(20, 20, 20, 255)) # wheels
         draw.rectangle([cx+14, cy+5, cx+17, cy+8], fill=(20, 20, 20, 255))
-        # Smoke
         if fi % 2 == 0:
             draw.ellipse([cx-4, cy-4, cx, cy], fill=(150, 150, 150, 150))
             draw.ellipse([cx-8, cy-8, cx-2, cy-2], fill=(100, 100, 100, 100))
+            
+        # --- Sleeping Tiger ---
+        tx_cat = bx + 420
+        ty_cat = 57
+        draw.rectangle([tx_cat, ty_cat, tx_cat+8, ty_cat+3], fill=(230, 120, 0, 255)) # body
+        draw.rectangle([tx_cat+7, ty_cat+1, tx_cat+10, ty_cat+3], fill=(230, 120, 0, 255)) # head
+        draw.line([tx_cat+1, ty_cat, tx_cat+1, ty_cat+2], fill=(0, 0, 0, 255)) # stripes
+        draw.line([tx_cat+4, ty_cat, tx_cat+4, ty_cat+2], fill=(0, 0, 0, 255))
+        if fi % 16 < 8:
+            draw.point([tx_cat+11, ty_cat-2], fill=(255, 255, 255, 255))
+            draw.point([tx_cat+12, ty_cat-3], fill=(255, 255, 255, 255))
+            draw.point([tx_cat+13, ty_cat-4], fill=(255, 255, 255, 255))
 
     # --- Ghost ---
-    # Floating around. Speed 3 -> Dist 384
-    offset_ghost = (fi * 3) % 384
-    for i in range(-1, W//384 + 2):
-        gx = i * 384 + 100 - offset_ghost
+    # Floating around. Speed 3 -> Dist 768
+    offset_ghost = (fi * 3) % 768
+    for i in range(-1, W//768 + 2):
+        gx = i * 768 + 500 - offset_ghost
         # Float up and down
         gy = 25 + int(3 * __import__('math').sin(fi * 0.2))
         
@@ -115,14 +126,56 @@ for fi in range(N):
     # Road
     draw.rectangle([0, 60, W, 76], fill=ROAD)
     
-    # Road markings (Speed 4 -> Dist 512)
-    offset_road = (fi * 4) % 512
-    for i in range(-1, W//512 + 2):
-        bx = i * 512 - offset_road
+    # Road markings (Speed 4 -> Dist 1024)
+    offset_road = (fi * 4) % 1024
+    for i in range(-1, W//1024 + 2):
+        bx = i * 1024 - offset_road
         
         # Road lines
-        for l in range(0, 512, 64):
+        for l in range(0, 1024, 64):
             draw.rectangle([bx+l, 67, bx+l+24, 69], fill=ROAD_LINE)
+            
+        # --- Mice Chasing ---
+        mx1 = bx + 600
+        my = 72
+        mx2 = mx1 + 12 
+        
+        # Mouse 1
+        draw.rectangle([mx1, my, mx1+4, my+2], fill=(150, 150, 150, 255))
+        draw.point([mx1-1, my+1], fill=(150, 150, 150, 255)) 
+        draw.line([mx1+4, my, mx1+6, my-1], fill=(150, 150, 150, 255)) 
+        # Mouse 2
+        draw.rectangle([mx2, my, mx2+4, my+2], fill=(100, 100, 100, 255))
+        draw.point([mx2-1, my+1], fill=(100, 100, 100, 255))
+        draw.line([mx2+4, my, mx2+6, my-1], fill=(100, 100, 100, 255))
+        
+        # animate legs
+        if fi % 4 < 2:
+            my -= 1
+            
+    # --- Birds ---
+    # Speed 3 -> Dist 768
+    offset_bird = (fi * 3) % 768
+    for i in range(-1, W//768 + 2):
+        bx = i * 768 + 300 - offset_bird
+        by = 15 + int(4 * __import__('math').sin(fi * 0.1))
+        
+        # draw a flock of 3 birds
+        for flock_off_x, flock_off_y in [(0, 0), (12, -4), (16, 6)]:
+            bird_x = bx + flock_off_x
+            bird_y = by + flock_off_y
+            
+            # Wing flapping
+            if fi % 4 < 2:
+                # wings up
+                draw.polygon([(bird_x, bird_y), (bird_x+2, bird_y+1), (bird_x+4, bird_y)], fill=(0, 0, 0, 255))
+                draw.point([bird_x+1, bird_y-1], fill=(0, 0, 0, 255))
+                draw.point([bird_x+3, bird_y-1], fill=(0, 0, 0, 255))
+            else:
+                # wings down
+                draw.polygon([(bird_x, bird_y), (bird_x+2, bird_y-1), (bird_x+4, bird_y)], fill=(0, 0, 0, 255))
+                draw.point([bird_x+1, bird_y+1], fill=(0, 0, 0, 255))
+                draw.point([bird_x+3, bird_y+1], fill=(0, 0, 0, 255))
         
     # Character centered
     cx, cy = W//2 - 15, 41
