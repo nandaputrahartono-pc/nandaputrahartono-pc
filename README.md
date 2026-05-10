@@ -98,10 +98,10 @@ I am a passionate **Web Developer, Mobile Developer, and AI Engineer** from Indo
 ## 🎵 Favorite Song
 
 <div align="center">
-  https://github.com/nandaputrahartono-pc/nandaputrahartono-pc/raw/main/favorite_song.mp4
-  <br/>
-  <b>Bubble (Abuku) - Yorushika</b><br/>
   <a href="https://open.spotify.com/track/59h6J25QnnT8xshPTFLkpe">
+    <img src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024c10f924eae00b377b623516" alt="Bubble (Abuku) - Yorushika" width="200" style="border-radius:15px; box-shadow: 0 4px 8px rgba(0,0,0,0.5); margin-bottom: 15px;" />
+    <br/>
+    <b>Bubble (Abuku) - Yorushika</b><br/>
     <img src="https://img.shields.io/badge/Listen_on-Spotify-1DB954?style=for-the-badge&logo=spotify&logoColor=white" style="margin-top: 10px;"/>
   </a>
 </div>
