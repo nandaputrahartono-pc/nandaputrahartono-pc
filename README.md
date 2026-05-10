@@ -121,6 +121,5 @@ If you like my work, consider supporting me!
 ---
 
 <div align="center">
-  <h3>💬 "Bye bye!"</h3>
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWkzdjFzMnp0M2xvdXBzNWgyNzZscWNpOWcxdHZlYWl3YW8wdnRjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kigKjNdOa1hI4/giphy.gif" width="120" alt="Bye bye pixel art"/>
+  <img src="bye-bye.gif" width="120" alt="Bye bye pixel art"/>
 </div>
