@@ -76,23 +76,22 @@ for fi in range(N):
         draw.polygon([(tx, ty), (tx-4, ty+7), (tx+4, ty+7)], fill=(150, 30, 30, 255)) # tent door
         # Campfire
         draw.polygon([(tx+15, ty+7), (tx+12, ty+4), (tx+18, ty+4)], fill=(255, 100, 0, 255))
-        # Fire flicker
         if fi % 4 < 2:
             draw.point([tx+15, ty+3], fill=(255, 200, 0, 255))
             
-        # --- Sleeping Tiger ---
+        # --- Broken Car (on the grass/shoulder) ---
         cx = bx + 220
-        cy = 57
-        draw.rectangle([cx, cy, cx+8, cy+3], fill=(230, 120, 0, 255)) # body
-        draw.rectangle([cx+7, cy+1, cx+10, cy+3], fill=(230, 120, 0, 255)) # head
-        # stripes
-        draw.line([cx+1, cy, cx+1, cy+2], fill=(0, 0, 0, 255))
-        draw.line([cx+4, cy, cx+4, cy+2], fill=(0, 0, 0, 255))
-        # sleeping bubble "Z"
-        if fi % 16 < 8:
-            draw.point([cx+11, cy-2], fill=(255, 255, 255, 255))
-            draw.point([cx+12, cy-3], fill=(255, 255, 255, 255))
-            draw.point([cx+13, cy-4], fill=(255, 255, 255, 255))
+        cy = 53
+        draw.rectangle([cx, cy, cx+20, cy+6], fill=(50, 100, 200, 255)) # body
+        draw.rectangle([cx+4, cy-4, cx+16, cy], fill=(50, 100, 200, 255)) # top
+        draw.rectangle([cx+5, cy-3, cx+9, cy], fill=(150, 200, 255, 255)) # windows
+        draw.rectangle([cx+11, cy-3, cx+15, cy], fill=(150, 200, 255, 255))
+        draw.rectangle([cx+3, cy+5, cx+6, cy+8], fill=(20, 20, 20, 255)) # wheels
+        draw.rectangle([cx+14, cy+5, cx+17, cy+8], fill=(20, 20, 20, 255))
+        # Smoke
+        if fi % 2 == 0:
+            draw.ellipse([cx-4, cy-4, cx, cy], fill=(150, 150, 150, 150))
+            draw.ellipse([cx-8, cy-8, cx-2, cy-2], fill=(100, 100, 100, 100))
 
     # --- Ghost ---
     # Floating around. Speed 3 -> Dist 384
@@ -116,7 +115,7 @@ for fi in range(N):
     # Road
     draw.rectangle([0, 60, W, 76], fill=ROAD)
     
-    # Road markings and objects (Speed 4 -> Dist 512)
+    # Road markings (Speed 4 -> Dist 512)
     offset_road = (fi * 4) % 512
     for i in range(-1, W//512 + 2):
         bx = i * 512 - offset_road
@@ -124,41 +123,6 @@ for fi in range(N):
         # Road lines
         for l in range(0, 512, 64):
             draw.rectangle([bx+l, 67, bx+l+24, 69], fill=ROAD_LINE)
-            
-        # --- Broken Car ---
-        cx = bx + 150
-        cy = 62
-        # Draw car on the side of the road
-        draw.rectangle([cx, cy, cx+20, cy+6], fill=(50, 100, 200, 255)) # body
-        draw.rectangle([cx+4, cy-4, cx+16, cy], fill=(50, 100, 200, 255)) # top
-        # windows
-        draw.rectangle([cx+5, cy-3, cx+9, cy], fill=(150, 200, 255, 255))
-        draw.rectangle([cx+11, cy-3, cx+15, cy], fill=(150, 200, 255, 255))
-        # wheels
-        draw.rectangle([cx+3, cy+5, cx+6, cy+8], fill=(20, 20, 20, 255))
-        draw.rectangle([cx+14, cy+5, cx+17, cy+8], fill=(20, 20, 20, 255))
-        # Smoke from engine (front of car is left side)
-        if fi % 2 == 0:
-            draw.ellipse([cx-4, cy-4, cx, cy], fill=(150, 150, 150, 150))
-            draw.ellipse([cx-8, cy-8, cx-2, cy-2], fill=(100, 100, 100, 100))
-            
-        # --- Mice Chasing ---
-        mx1 = bx + 350
-        my = 72
-        mx2 = mx1 + 12 # second mouse behind the first
-        
-        # Mouse 1
-        draw.rectangle([mx1, my, mx1+4, my+2], fill=(150, 150, 150, 255))
-        draw.point([mx1-1, my+1], fill=(150, 150, 150, 255)) # nose
-        draw.line([mx1+4, my, mx1+6, my-1], fill=(150, 150, 150, 255)) # tail
-        # Mouse 2
-        draw.rectangle([mx2, my, mx2+4, my+2], fill=(100, 100, 100, 255))
-        draw.point([mx2-1, my+1], fill=(100, 100, 100, 255))
-        draw.line([mx2+4, my, mx2+6, my-1], fill=(100, 100, 100, 255))
-        
-        # animate legs by bobbing
-        if fi % 4 < 2:
-            my -= 1
         
     # Character centered
     cx, cy = W//2 - 15, 41
