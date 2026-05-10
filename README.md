@@ -121,5 +121,5 @@ If you like my work, consider supporting me!
 ---
 
 <div align="center">
-  <img src="bye-bye.gif" width="120" alt="Bye bye pixel art"/>
+  <img src="bye-bye-banner.gif" width="100%" alt="Bye bye pixel art banner"/>
 </div>
