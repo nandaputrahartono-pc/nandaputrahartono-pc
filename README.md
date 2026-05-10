@@ -4,8 +4,8 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=2196F3&center=true&vCenter=true&width=435&lines=Web+Developer;Mobile+Developer;AI+Engineer" alt="Typing SVG" /></a>
 
-<!-- Placeholder for walking pixel character. You can replace this link with any walking pixel character gif you like! -->
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHI2aW1uZHJzMDIwbDVrdHNxdjYxczBwbGNwcGRhZWlkM3E0dG1yYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif" width="150" alt="walking pixel character"/>
+<!-- Custom generated walking pixel character -->
+<img src="walking-character.gif" width="150" alt="walking pixel character"/>
 
 ---
 
