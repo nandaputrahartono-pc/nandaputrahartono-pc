@@ -30,8 +30,7 @@ I am a passionate **Web Developer, Mobile Developer, and AI Engineer** from Indo
 - **University:** Universitas Catur Insan Cendikia (IT Student)
 - **SMA:** SMA IT Nuurusshiidiq
 - **SMP:** SMP IT Nuurusshiidiq
-- **SD:** SDN 1 Jadimulya
-- **TK:** Al-Huda
+
 
 ---
 
